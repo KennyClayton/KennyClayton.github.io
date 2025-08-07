@@ -1,1 +1,57 @@
-<p>This is the home page</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Collapsible DNS Menu</title>
+  <style>
+    .collapsible {
+      background-color: #eee;
+      color: #333;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+    }
+    .active, .collapsible:hover {
+      background-color: #ccc;
+    }
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Things I learned about DNS</h2>
+<button class="collapsible">Show/Hide List</button>
+<div class="content">
+  <ul>
+    <li>DNS stands for Domain Name System</li>
+    <li>It translates domain names to IP addresses</li>
+    <li>DNS servers can be primary or secondary</li>
+    <li>Common DNS record types: A, AAAA, CNAME, MX, TXT</li>
+    <li>DNS caching helps speed up web browsing</li>
+    <!-- Add more items as you like -->
+  </ul>
+</div>
+
+<script>
+  var coll = document.querySelector('.collapsible');
+  var content = document.querySelector('.content');
+  coll.addEventListener('click', function() {
+    this.classList.toggle('active');
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+</script>
+
+</body>
+</html>
